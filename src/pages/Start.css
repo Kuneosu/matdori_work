@@ -1,0 +1,27 @@
+.START {
+    padding: 100px 40px 0px 40px;
+    position: relative;
+}
+
+.TITLE {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#matdori {
+    font-weight: bold;
+    text-align: end;
+}
+
+.CARD_SECTION {
+    margin-top: 70px;
+    display: flex;
+    gap: 50px;
+}
+
+.BUTTON_SECTION {
+    margin-top: 50px;
+    padding: 0 20px;
+}

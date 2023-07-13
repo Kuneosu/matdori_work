@@ -1,0 +1,8 @@
+.SIGNUP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 390px;
+    padding: 0 38px;
+}
+
