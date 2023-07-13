@@ -1,0 +1,29 @@
+import './App.css';
+import Start from './pages/Start';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Home from './pages/Home';
+import My from './pages/My';
+import Posts from './pages/Posts';
+import Edit from './pages/Edit';
+import Dic from './pages/Dic';
+import { Route, Routes } from 'react-router-dom';
+
+function App() {
+  return (
+    <div className="App">
+      <Routes>
+        <Route path='/' element={<Start />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/my' element={<My />} />
+        <Route path='/posts' element={<Posts />} />
+        <Route path='/edit' element={<Edit />} />
+        <Route path='/dic' element={<Dic />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
