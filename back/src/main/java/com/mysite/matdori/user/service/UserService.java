@@ -27,7 +27,7 @@ public class UserService {
 
     public String singin(String ID, String password) {
         try {
-            User user = userRepository.findByID(ID).get();
+            User user = userRepository.findByUserID(ID).get();
             log.info("user: {}", user);
             log.info("ID: {}", ID);
             log.info("password: {}", password);
@@ -35,7 +35,7 @@ public class UserService {
                 log.error("Invalid password");
                 throw new RuntimeException("Invalid password");
             }
-            return jwtTokenProvider.createToken(user.getID(), user.getRoles());
+            return jwtTokenProvider.createToken(user.getUserID(), user.getRoles());
 
         } catch (Exception e) {
             log.info(e.getMessage());
@@ -66,33 +66,38 @@ public class UserService {
     public User whoami(HttpServletRequest req) {
         log.info(jwtTokenProvider.resolveToken(req));
         return userRepository
-                .findByID(jwtTokenProvider.getUserID(jwtTokenProvider.resolveToken(req)))
+                .findByUserID(jwtTokenProvider.getUserID(jwtTokenProvider.resolveToken(req)))
                 .get();
     }
-    ///////////////////////admin 유저 생성/////////////////
-    @EventListener
-    public void createAdminAccount(ApplicationReadyEvent event) {
-        // 관리자 계정 정보
-        String adminEmail = "admin";
-        String adminPassword = "admin";
-        String adminUsername = "admin";
 
-        // 이미 관리자 계정이 존재하는지 확인
-        if (userRepository.existsByEmail(adminEmail)) {
-            return; // 이미 관리자 계정이 존재하면 생성하지 않음
-        }
-
-        // 관리자 계정 생성
-        User adminUser = new User();
-        adminUser.setEmail(adminEmail);
-        adminUser.setPassword(passwordEncoder.encode(adminPassword));
-        adminUser.setUsername(adminUsername);
-        // admin 역할 부여
-        if (adminUser.getRoles() == null) {
-            List<UserRole> set = new ArrayList<UserRole>();
-            set.add(UserRole.ROLE_ADMIN);
-            adminUser.setRoles(set);
-        }
-        userRepository.save(adminUser);
+    public boolean isUserIdExists(String userID) {
+        return userRepository.existsByUserID(userID);
     }
+
+//    ///////////////////////admin 유저 생성/////////////////
+//    @EventListener
+//    public void createAdminAccount(ApplicationReadyEvent event) {
+//        // 관리자 계정 정보
+//        String adminEmail = "admin";
+//        String adminPassword = "admin";
+//        String adminUsername = "admin";
+//
+//        // 이미 관리자 계정이 존재하는지 확인
+//        if (userRepository.existsByEmail(adminEmail)) {
+//            return; // 이미 관리자 계정이 존재하면 생성하지 않음
+//        }
+//
+//        // 관리자 계정 생성
+//        User adminUser = new User();
+//        adminUser.setEmail(adminEmail);
+//        adminUser.setPassword(passwordEncoder.encode(adminPassword));
+//        adminUser.setUsername(adminUsername);
+//        // admin 역할 부여
+//        if (adminUser.getRoles() == null) {
+//            List<UserRole> set = new ArrayList<UserRole>();
+//            set.add(UserRole.ROLE_ADMIN);
+//            adminUser.setRoles(set);
+//        }
+//        userRepository.save(adminUser);
+//    }
 }

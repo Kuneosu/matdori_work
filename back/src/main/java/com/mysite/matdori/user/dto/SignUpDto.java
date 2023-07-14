@@ -18,7 +18,7 @@ public class SignUpDto {
     private String email;
 
     @Schema(description = "아이디", example = "cjh1234")
-    private String ID;
+    private String userID;
 
     @Schema(description = "비밀번호", example = "1234")
     private String password;

@@ -9,6 +9,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +30,7 @@ public class UserController {
     @Operation(summary = "회원가입")
     public User signup(@RequestBody SignUpDto user) {
 
-        User user1 = User.builder().email(user.getEmail()).ID(user.getID()).password(user.getPassword())
+        User user1 = User.builder().email(user.getEmail()).userID(user.getUserID()).password(user.getPassword())
                 .username(user.getUsername()).nickname(user.getNickname()).build();
 
         return userService.signup(user1);
@@ -38,7 +40,7 @@ public class UserController {
     @Operation(summary = "로그인")
     public Token signin(@RequestBody SignInDto signInDto) {
         Token token = Token.builder()
-                .token(userService.singin(signInDto.getID(), signInDto.getPassword())).build();
+                .token(userService.singin(signInDto.getUserID(), signInDto.getPassword())).build();
         return token;
     }
 
@@ -54,4 +56,10 @@ public class UserController {
         return userService.whoami(req);
     }
 
+    @GetMapping("/check/{id}")
+    @Operation(summary = "ID 중복 확인")
+    public ResponseEntity<Boolean> checkId(@PathVariable("id") String id) {
+        boolean exists = userService.isUserIdExists(id);
+        return new ResponseEntity<>(exists, HttpStatus.OK);
+    }
 }

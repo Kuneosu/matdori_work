@@ -28,7 +28,7 @@ public class SecurityConfig {
         // Disable CSRF (cross site request forgery)
         http.authorizeRequests()
                 .requestMatchers("/h2-console/**", "/swagger-ui/**", "/swagger-resources/**",
-                        "/v3/api-docs/**", "/api/user/signin", "/api/user/signup")
+                        "/v3/api-docs/**", "/api/user/signin", "/api/user/signup", "api/user/check/**")
                 .permitAll().anyRequest().authenticated();
 
         http.csrf(csrf->csrf.disable());
