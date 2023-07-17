@@ -5,4 +5,30 @@
     width: 100%;
     position: absolute;
     bottom: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.BOTTOM_BAR_ICON {
+    width: 80px;
+    height: 80px;
+    border-radius: 45px;
+
+}
+
+.BOTTOM_BAR_ICON.FIRST_ICON {
+    background-image: url("https://plus.unsplash.com/premium_photo-1681046751337-740b6433b725?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+    background-size: cover;
+}
+
+.BOTTOM_BAR_ICON.SECOND_ICON {
+    background-image: url("https://images.unsplash.com/photo-1593533482434-d8443c6c5649?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80");
+    background-size: cover;
+}
+
+.BOTTOM_BAR_ICON.THIRD_ICON {
+    background-image: url("https://images.unsplash.com/photo-1532372320572-cda25653a26d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+    background-size: cover;
 }
