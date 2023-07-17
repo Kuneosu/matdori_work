@@ -7,6 +7,7 @@ body {
   background-color: #f6f6f6;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 body {
