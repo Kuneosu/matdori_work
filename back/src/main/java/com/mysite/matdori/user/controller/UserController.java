@@ -44,18 +44,6 @@ public class UserController {
         return token;
     }
 
-    @GetMapping("/getUser/{email}")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public User getUser(@PathVariable("email") String email) {
-        return userService.getUserByEmail(email);
-    }
-
-    @GetMapping("/whoisme")
-    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_CLIENT')")
-    public User whoisme(HttpServletRequest req) {
-        return userService.whoami(req);
-    }
-
     @GetMapping("/check/{id}")
     @Operation(summary = "ID 중복 확인")
     public ResponseEntity<Boolean> checkId(@PathVariable("id") String id) {
