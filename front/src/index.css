@@ -17,6 +17,7 @@ body {
 #root {
   margin: 0 auto;
   max-width: 390px;
+  min-width: 390px;
   width: 100%;
   min-height: 100vh;
   background-color: white;
