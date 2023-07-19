@@ -13,6 +13,11 @@
 
 }
 
+button {
+    border: none;
+    cursor: pointer;
+}
+
 .BOTTOM_BAR_ICON {
     width: 80px;
     height: 80px;
