@@ -3,7 +3,9 @@ import HomeCard from "../components/HomeCard";
 import HomeTag from "../components/HomeTag";
 import "./Home.css";
 
+
 const Home = () => {
+
     return (
         <div className="HOME">
             <div className="HOME_CONTENTS">
@@ -11,8 +13,15 @@ const Home = () => {
                     7월 14일
                 </div>
                 <HomeTag />
-                <HomeCard />
-                <HomeCard />
+                <div className="HOME_POSTS">
+
+                    <HomeCard />
+                    <HomeCard />
+                    <HomeCard />
+                    <HomeCard />
+                    <HomeCard />
+                    <HomeCard />
+                </div>
             </div>
             <BottomBar />
         </div>
