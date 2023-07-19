@@ -37,6 +37,8 @@ dependencies {
 	implementation 'com.h2database:h2:2.1.214'
 	implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.2'
 
+	//javax
+	implementation 'javax.xml.bind:jaxb-api:2.3.1'
 }
 
 tasks.named('test') {
