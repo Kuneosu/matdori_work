@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/matdori.iml" filepath="$PROJECT_DIR$/.idea/modules/matdori.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/matdori.main.iml" filepath="$PROJECT_DIR$/.idea/modules/matdori.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/matdori.test.iml" filepath="$PROJECT_DIR$/.idea/modules/matdori.test.iml" />
     </modules>
   </component>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/matdori.main.iml" filepath="$PROJECT_DIR$/.idea/modules/matdori.main.iml" />
-    </modules>
-  </component>
->>>>>>> 9093b78233a147960f7d15a012daecde9c962c2b
 </project>
