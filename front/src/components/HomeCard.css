@@ -1,0 +1,66 @@
+.HOME_CARD {
+    padding: 10px;
+    height: 74px;
+    border-radius: 18px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: height 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.HOME_CARD.expanded {
+    height: 374px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.HOME_HEADER {
+    display: flex;
+}
+
+.HOME_PROFILE {
+    width: 72px;
+    height: 72px;
+    border-radius: 45px;
+    background-image: url("https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80");
+    background-size: cover;
+}
+
+.HOME_LINE {
+    border: 1px solid black;
+    height: 72px;
+    margin: 0 15px;
+
+    transition: border 0.3s ease-in-out;
+}
+
+.HOME_CONTENT_HEADER {
+    margin-top: 15px;
+}
+
+.HOME_CONTENT_TITLE {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.HOME_CONTENT_DATE {
+    font-size: 16px;
+    color: #6c6c6c;
+}
+
+.HOME_CONTENT {
+    visibility: hidden;
+}
+
+.HOME_CARD.expanded .HOME_CONTENT {
+    margin-top: 10px;
+    padding: 15px;
+    border-top: 2px dashed rgba(0, 0, 0, 0.5);
+    visibility: visible;
+}

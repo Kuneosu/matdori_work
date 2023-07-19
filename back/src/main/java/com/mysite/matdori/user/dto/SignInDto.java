@@ -10,9 +10,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+
 public class SignInDto {
     @Schema(description = "아이디", example = "cjh1234")
-    public String ID;
+    public String userID;
 
     @Schema(description = "비밀번호", example = "1234")
     public String password;

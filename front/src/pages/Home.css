@@ -1,0 +1,14 @@
+.HOME {
+    height: 100vh;
+    position: relative;
+}
+
+.HOME .HOME_CONTENTS {
+    padding: 20px;
+}
+
+.HOME .HOME_TITLE {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

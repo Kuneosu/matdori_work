@@ -1,5 +1,22 @@
+import BottomBar from "../components/BottomBar";
+import HomeCard from "../components/HomeCard";
+import HomeTag from "../components/HomeTag";
+import "./Home.css";
+
 const Home = () => {
-    return <div>Home</div>
+    return (
+        <div className="HOME">
+            <div className="HOME_CONTENTS">
+                <div className="HOME_TITLE">
+                    7월 14일
+                </div>
+                <HomeTag />
+                <HomeCard />
+                <HomeCard />
+            </div>
+            <BottomBar />
+        </div>
+    );
 };
 
 export default Home;

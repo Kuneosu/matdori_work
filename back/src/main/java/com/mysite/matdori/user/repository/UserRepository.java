@@ -9,22 +9,22 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     // 아이디 중복 체크
-    boolean existsByEmail(String email);
+    boolean existsByUserID(String userID);
 
     // 로그인 메소드
-    Optional<User> findByIDAndPassword(String ID, String password);
+    Optional<User> findByUserIDAndPassword(String userID, String password);
 
 
     // 회원 탈퇴
     @Transactional
-    void deleteById(Long ID);
+    void deleteById(Long userID);
 
     // 유저 검색
     Optional<User> findByEmail(String email);
 
     Optional<User> findByUsername(String username);
 
-    Optional<User> findByID(String ID);
+    Optional<User> findByUserID(String userID);
 
     // 회원가입 메소드
 }
