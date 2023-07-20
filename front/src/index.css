@@ -20,5 +20,6 @@ body {
   min-width: 390px;
   width: 100%;
   min-height: 100vh;
+  max-height: 844px;
   background-color: white;
 }
