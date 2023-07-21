@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MatdoriApplication<matdori>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mysite.matdori.MatdoriApplication",
+            "projectName": "matdori",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
