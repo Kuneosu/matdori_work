@@ -26,8 +26,8 @@ const Login = () => {
         // Do axios.POST with the idValue and passwordValue
         // Assuming you have an axios.post() method to handle the login process.
         // Make sure to add the necessary code to handle the login logic.
-        axios.post('/login', {
-            id: idValue,
+        axios.post('http://localhost:8080/api/user/signin', {
+            userID: idValue,
             password: passwordValue,
         })
             .then((response) => {
