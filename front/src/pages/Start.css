@@ -19,7 +19,7 @@
 .CARD_SECTION {
     margin-top: 70px;
     display: flex;
-    gap: 50px;
+    justify-content: center;
 }
 
 .BUTTON_SECTION {

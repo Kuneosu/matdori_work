@@ -7,7 +7,7 @@ const BottomBar = () => {
         navigate(`/home`);
     }
     const moveDic = () => {
-        navigate(`/dic`);
+        navigate(`/dictionary`);
     }
     const moveMy = () => {
         navigate(`/my`);

@@ -6,7 +6,7 @@ const My = () => {
             <div className="MY_CONTENT">
                 <div id="MY_NAME">닉네임</div>
                 <center className="MY_PROFILE">
-                    <img id="MY_IMAGE" src="https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80" />
+                    <img alt="내프로필이미지" id="MY_IMAGE" src="https://img.freepik.com/free-photo/adorable-kitty-looking-like-it-want-to-hunt_23-2149167099.jpg?size=626&ext=jpg&ga=GA1.2.1969849226.1689050998&semt=sph" />
                 </center>
                 <center>
                     <button className="MY_INFO">회원정보 수정</button>
