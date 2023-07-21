@@ -12,7 +12,9 @@ const HomeCard = () => {
         <div className={`HOME_CARD ${expanded ? "expanded" : ""}`}
             onClick={handleClick}>
             <div className="HOME_HEADER">
-                <div className="HOME_PROFILE"></div>
+                <div className="HOME_PROFILE">
+                    <img alt="프로필이미지" src="https://img.freepik.com/free-photo/adorable-kitty-looking-like-it-want-to-hunt_23-2149167099.jpg?size=626&ext=jpg&ga=GA1.2.1969849226.1689050998&semt=sph" className="HOME_PROFILE_IMAGE" />
+                </div>
                 <div className="HOME_LINE"></div>
                 <div className="HOME_CONTENT_HEADER">
                     <div className="HOME_CONTENT_TITLE">

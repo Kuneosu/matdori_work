@@ -1,0 +1,30 @@
+.DICTIONARY {
+    height: 100vh;
+    position: relative;
+}
+
+.DICTIONARY .DICTIONARY_CONTENTS {
+    padding: 20px;
+}
+
+.DICTIONARY .DICTIONARY_CONTENTS .DICTIONARY_POSTS {
+    padding: 10px 5px;
+    height: 66vh;
+    overflow: auto;
+    overflow-y: scroll;
+
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    border-radius: 10px;
+}
+
+.DICTIONARY_POSTS::-webkit-scrollbar {
+    display: none;
+}
+
+.DICTIONARY .DICTIONARY_TITLE {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

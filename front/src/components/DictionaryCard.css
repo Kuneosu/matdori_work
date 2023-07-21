@@ -1,0 +1,48 @@
+.DICTIONARY_CARD {
+    height: 310px;
+    border-radius: 18px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: height 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.DICTIONARY_THUMBNAIL {
+    padding: 0;
+    height: 210px;
+    border-radius: 18px 18px 0px 0px;
+    overflow: hidden;
+}
+
+.DICTIONARY_THUMBNAIL_IMAGE {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.DICTIONARY_LINE {
+    border-top: 1px solid black;
+    height: 0vh;
+    width: 100%;
+}
+
+.DICTIONARY_CONTENT_HEADER {
+    padding: 15px;
+}
+
+.DICTIONARY_CONTENT_TITLE {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.DICTIONARY_CONTENT_DATE {
+    font-size: 16px;
+    color: #6c6c6c;
+}

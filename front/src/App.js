@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import My from './pages/My';
 import Posts from './pages/Posts';
 import Edit from './pages/Edit';
-import Dic from './pages/Dic';
+import Dictionary from './pages/Dictionary';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path='/my' element={<My />} />
         <Route path='/posts' element={<Posts />} />
         <Route path='/edit' element={<Edit />} />
-        <Route path='/dic' element={<Dic />} />
+        <Route path='/dictionary' element={<Dictionary />} />
       </Routes>
     </div>
   );

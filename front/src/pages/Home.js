@@ -14,7 +14,6 @@ const Home = () => {
                 </div>
                 <HomeTag />
                 <div className="HOME_POSTS">
-
                     <HomeCard />
                     <HomeCard />
                     <HomeCard />
