@@ -13,8 +13,6 @@ import lombok.NoArgsConstructor;
 @Builder
 public class SignUpDto {
     @Schema(description = "이메일", example = "test@test.com")
-    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$",
-            message = "이메일 형식이 올바르지 않습니다.")
     private String email;
 
     @Schema(description = "아이디", example = "cjh1234")

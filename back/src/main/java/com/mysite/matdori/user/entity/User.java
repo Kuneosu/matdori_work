@@ -1,5 +1,7 @@
 package com.mysite.matdori.user.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.mysite.matdori.information.entity.Information;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,4 +35,8 @@ public class User {
 
     @ElementCollection(fetch = FetchType.EAGER)
     List<UserRole> roles;
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
+    private List<Information> informationList;
 }

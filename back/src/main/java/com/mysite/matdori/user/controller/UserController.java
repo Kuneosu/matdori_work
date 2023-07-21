@@ -50,4 +50,6 @@ public class UserController {
         boolean exists = userService.isUserIdExists(id);
         return new ResponseEntity<>(exists, HttpStatus.OK);
     }
+
+
 }
